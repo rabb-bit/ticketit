@@ -11,6 +11,8 @@ class DashboardController extends Controller
 {
     public function index($indicator_period = 2)
     {
+
+    	//damn artist change the world
         $tickets_count = Ticket::count();
         $open_tickets_count = Ticket::whereNull('completed_at')->count();
         $closed_tickets_count = Ticket::whereNotNull('completed_at')->count();
